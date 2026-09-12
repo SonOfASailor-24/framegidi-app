@@ -1538,12 +1538,6 @@ function InstallForm({ job, apcName, existing, onSave }) {
       <Field label="Notes"><textarea value={notes} onChange={(e) => setNotes(e.target.value)} rows={2} className="input resize-none" /></Field>
       <Field label="Status"><Segmented small options={INSTALL_STATUSES} value={status} onChange={setStatus} /></Field>
       <button onClick={submit} className="w-full rounded-md bg-amber-500 py-2 text-xs font-semibold text-neutral-950">Save Installation</button>
-    </div>
-  );
-}
-
-function InstallSummary({ rec }) {
-  return (
     <div className="rounded-md border border-neutral-800 bg-neutral-900 p-2.5 text-xs">
       <div className="flex items-center justify-between">
         <span className="font-medium text-neutral-200">{rec.clientName} <span className="font-mono text-[10px] text-neutral-500">{rec.jobRef}</span></span>
